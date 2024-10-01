@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pacesetters Academy | Contact Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #FFF1F2;
+      }
+      body,html{
+        
+font-family: 'Montserrat',sans-serif;
+}
+.contact-content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+  margin-top:50px;
+  width:100%;
+  height:100%;
+  border:none;
+  outline: none;
+  font-style: italic;
+}
+contact-content h3{
+  text-align: center;
+}
+.contact-list{
+  text-align: center;
+  list-style: none;
+}
+  .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fc9539;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 0;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  background:#fc9539;
+  color: #FFF1F2;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidebar .closeBtn i{
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 1.5em;
+  margin-left: 50px;
+  background-color:#fc9539;
+}
+ .heading .home-bar{
+        font-size: 1.65em;
+        padding-top: 35px;
+        padding-left: 26px;
+        cursor: pointer;
+        position:absolute;
+        top:-112px;
+        left:-30px;
+      }
+      .heading{
+        display: flex;
+        position:relative;
+        margin-top:70px;
+      
+      }
+      .sidebar h2{
+  font-weight: bold;
+  background: #77A0F2;
+  color:#FFF1F2 ;
+  line-height: 40px;
+  font-size: 1.6em;
+  padding-left:20px;
+}
+.contact-img{
+  position:relative;
+}
+.contact-img img{
+  position:absolute;
+  top:65px;
+  width:22.5rem;
+}
+      .title-img{
+        width:18rem;
+        margin: 0 auto;
+      }
+ .contact-img{
+        width:22.5rem;
+        opacity: 0;
+      transform: translateX(-100px); /* Initial position off the screen */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .contact-img.show{
+opacity: 1;
+      transform: translateX(0);
+      }
+      @media (min-width:640px){
+        .contact-content{
+          width:100%;
+          height:100%;
+          font-size:2em;
+          line-height: 100px;
+        }
+        .home-bar{
+          top:-500px;
+          left:20px;
+        }
+        .contact-img img{
+          width:60rem;
+          left:-300px;
+        }
+        .title-img{
+          width:40rem;
+        }
+      }
+    </style>
+</head>
+<body>
+  <div id="sideBar" class="sidebar">
+  <h2>Pacesetters Academy</h2>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+    <a href="home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
+  <div class="contact-content">
+    <div class="heading">
+    <a onclick="openNav()" class="home-bar"><i class="fa-solid fa-bars "></i></a>
+      <img src="Logotitle.png" class="title-img">
+    </div>
+    <div class="contact-info">
+    <h3>Contact us on these platforms:</h3>
+    <ul class="contact-list">
+      <li class="contact-item">
+<i class="fa-brands fa-instagram"></i>  @pacesettersacademy
+</li>
+<li class="contact-item">
+<i class="fa-brands fa-facebook"></i> @pacesettersacademylive
+</li>
+<li class="contact-item">
+  <i class="fa-brands fa-x-twitter"></i>
+  @pacesettersacademy
+</li>
+<li class="contact-item">
+<i class="fa-solid fa-phone"></i>
+ 0905979408
+ </li>
+    </ul>
+  </div>
+  <div class="contact-img">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1XLL3k0miQ1aTJfr6DRGytF1M49lXUZA_Q&usqp=CAU" alt="people-smiling">
+  </div>
+  </div>
+<script>
+  function openNav() {
+  document.getElementById("sideBar").style.width = "250px";
+  document.getElementById("sideBar").style.opacity = "1";
+}
+
+/* Close the sidebar */
+function closeNav() {
+  document.getElementById("sideBar").style.width = "0";
+  document.getElementById("sideBar").style.opacity = "0";
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const element = document.querySelector('.contact-img'); // Select the single element
+
+  const options = {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the "show" class when the element is in view
+        element.classList.add('show');
+
+        // Trigger Anime.js animation
+        anime({
+          targets: element,
+          translateX: [100, 0], // Slide in from right to left
+          opacity: [0, 1], // Fade in
+          easing: 'easeOutQuad',
+          duration: 800
+        });
+
+        // Stop observing once animation has been triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+  // Start observing the single element
+  observer.observe(element);
+});
+</script>
+</body>
+</html>
