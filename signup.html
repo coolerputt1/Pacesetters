@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacesetters Academy | Sign Up</title>
+    <link rel="shortcut icon" href="Logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #FFF1F2;
+      }
+      body, html {
+        font-family: "Montserrat", sans-serif;
+      }
+      .form-title {
+        text-align: center;
+        padding-bottom: 25px;
+      }
+      .signup-form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        line-height: 25px;
+      }
+      .form-input {
+        width: 15rem;
+        outline: none;
+        border: none;
+        border-bottom: 2px solid black;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2em;
+        padding-right: 2rem;
+      }
+      .form-label {
+        opacity: 0.7;
+        font-size: 0.8em;
+      }
+      .signin-img {
+        width: 18rem;
+        display: flex;
+        justify-content: center;
+        margin:0 auto;
+      }
+      .submit-btn {
+        padding: 20px;
+        background-image: linear-gradient(300deg,#fc9539,#89A7F9);
+        border-radius: 30% 70% 0% 100% / 100% 57% 43% 0%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        font-family:"Montserrat", sans-serif;
+        box-shadow: 2px 2px 4px 4px grey,
+ 1px 1px 5px 5px lightgrey,
+ inset -1px -1px 6px 6px #FFF1F2
+  ;
+  margin-top:50px;
+      }
+      .submit-btn:hover{
+        opacity: 0.6;
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow:2px 2px 3px 3px black,
+  -2px -2px 4px -4px grey,
+  inset -2px 2px 5px 5px #FFF1F2
+  ;
+      }
+      .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        cursor: pointer;
+        color: #666;
+      }
+      .form-group {
+        position: relative;
+        margin-bottom: 15px;
+      }
+      .alternative{
+        text-align: center;
+        padding-top: 50px;
+      }
+      @media (min-width:640px){
+        .form-input{
+          width:40rem;
+          margin-top:50px;
+          font-size:3.5em;
+          border-bottom:3px solid black;
+        }
+        .form-label{
+          font-size:2em;
+        }
+        .toggle-password{
+          font-size:3.5em;
+        }
+        .submit-btn{
+          padding:32px;
+          font-size:2em;
+        }
+        .signin-img{
+          width:30rem;
+        }
+        .form-title{
+          font-size:3.0em;
+          padding:100px;
+        }
+         .alternative{
+          font-size:3.0em;
+          padding-top:110px;
+        }
+      }
+    </style>
+</head>
+<body>
+  <img src="Logotitle.png" class="signin-img">
+  <h2 class="form-title">Sign Up</h2>
+
+  <form action="/submit-signup" method="POST" class="signup-form">
+    <div class="form-group">
+      <label for="username" class="form-label">Username:</label><br>
+      <input type="text" id="username" name="username" class="form-input" required><br><br>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email:</label><br>
+      <input type="email" id="email" name="email" class="form-input" required><br><br>
+    </div>
+
+    <div class="form-group">
+      <label for="password" class="form-label">Password:</label><br>
+      <input type="password" id="password" name="password" class="form-input" required>
+      <i class="fa fa-eye toggle-password" data-input="password"></i>
+    </div>
+
+    <div class="form-group">
+      <label for="confirm-password" class="form-label">Confirm Password:</label><br>
+      <input type="password" id="confirm-password" name="confirm-password" class="form-input" required>
+      <i class="fa fa-eye toggle-password" data-input="confirm-password"></i>
+    </div>
+
+    <input type="submit" value="Sign Up" class="submit-btn">
+  </form>
+<p class="alternative">Already have an account? <a href="Signin.html" class="signup">Sign in</a></p>
+  <script>
+    document.querySelectorAll('.toggle-password').forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        const input = document.getElementById(this.getAttribute('data-input'));
+        if (input.type === 'password') {
+          input.type = 'text';
+          this.classList.remove('fa-eye');
+          this.classList.add('fa-eye-slash');
+        } else {
+          input.type = 'password';
+          this.classList.remove('fa-eye-slash');
+          this.classList.add('fa-eye');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
