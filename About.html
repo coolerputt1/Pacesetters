@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pacesetters Academy | About</title>
+<link rel="shortcut icon" href="Logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  body,html{
+    font-family: 'Montserrat',sans-serif;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #FFF1F2;
+  }
+  .about-title{
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 2em;
+    margin :0 auto;
+    font-style: italic;
+  }
+  .about-us-info{
+    text-align:center;
+    line-height:33px;
+  }
+  .info-section{
+    text-align: center;
+    line-height: 35px;
+  }
+  .about-us-pic{
+    width:22.5rem;
+    padding: 10px 0;
+    opacity: 0;
+      transform: translateX(-100px); /* Initial position off the screen */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .pic-center{
+           display:flex;
+           justify-content: center;
+    }
+
+  .about-us-pic.show{
+    width:22.5rem;
+    padding: 10px 0;
+    opacity: 1;
+      transform: translateX(0px); /* Slide in */
+  }
+  
+      .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fc9539;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity:0;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  background:#fc9539;
+  color: #FFF1F2;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidebar .closeBtn i{
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 1.5em;
+  margin-left: 50px;
+  background-color:#fc9539;
+}
+      .heading{
+        display: flex;
+      }
+      .home-bar{
+        font-size: 1.65em;
+        padding-top: 35px;
+        padding-left: 12px;
+        cursor: pointer;
+        position: fixed;
+      }
+      .sidebar h2{
+  font-weight: bold;
+  background: #77A0F2;
+  color:#FFF1F2 ;
+  line-height: 40px;
+  font-size: 1.6em;
+  padding-left:20px;
+}
+@media (min-width:768px){
+  .info-section{
+    font-size:1.5em;
+  }
+  .about-title{
+      font-size:4em;
+      text-align: center;
+    }
+    .pic-center .about-us-pic.show{
+      width:35em;
+    }
+    .fa-solid{
+      font-size:2.7em ;
+      padding-right: 50px;
+    }
+    .sidebar a{
+      line-height:55px;
+    }
+}
+</style>
+</head>
+<body>
+<div id="sideBar" class="sidebar">
+    <h2>Pacesetters Academy</h2>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+    <a href="home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+  <div class="heading">
+<a onclick="openNav()" class="home-bar"><i class="fa fa-solid fa-bars"></i></a>
+<p class="about-title">About Us</p>
+</div>
+<p class="about-us-info">
+  <p class="info-section">
+  Welcome to Pace Setters Academy, where we combine the power of education with a strong foundation in faith. Our mission is to empower students to excel academically while nurturing their spiritual growth, creating a balanced and holistic learning experience.
+  </p>
+  <div class="pic-center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkf9KBsMMe8IzAYYdWmdrFUFv31Ow14PHPuQ&s" class="about-us-pic">
+</div>
+<p class="info-section">At Pace Setters Academy, we offer high-quality online lessons designed to cater to a variety of learning needs. Whether you’re seeking to enhance your knowledge, achieve academic excellence, or grow in faith, our courses are tailored to set the pace for your success. Our educators are not only experts in their fields but also committed to guiding students with godly principles, fostering a community that promotes integrity, discipline, and a love for learning.
+</p>
+<div class="pic-center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Z1V14AV30pghNWihblAq-dOT9s23JaVqwliNf-tjw9JBNWOeyU7h43oY&s=10" class="about-us-pic">
+</div>
+<p class="info-section">
+Join us at Pace Setters Academy, where education meets inspiration, and every student is encouraged to pursue excellence in both their academic and spiritual journeys.
+</p>
+<div class="pic-center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGkWXMg7aR_eOerbuhTAEYxWIbEamzl_yB13mElgLtg&s" class="about-us-pic">
+</p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  function openNav() {
+  document.getElementById("sideBar").style.width = "250px";
+  document.getElementById("sideBar").style.opacity = "1";
+  if(window.innerWidth >= 768){
+    document.getElementById("sideBar").style.width = "500px";
+  }
+}
+
+/* Close the sidebar */
+function closeNav() {
+  document.getElementById("sideBar").style.width = "0";
+  document.getElementById("sideBar").style.opacity = "0";
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  // Options for the observer
+  const options = {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  };
+
+  // Create the observer
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the "show" class when the element is in view
+        entry.target.classList.add('show');
+
+        // Trigger Anime.js animation
+        anime({
+          targets: entry.target,
+          translateX: [100, 0], // Slide in from right to left
+          opacity: [0, 1], // Fade in
+          easing: 'easeOutQuad',
+          duration: 800
+        });
+
+        // Stop observing once animation has been triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  // Target all the elements with the "slide-in" class
+  const slideElements = document.querySelectorAll('.about-us-pic');
+  slideElements.forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
+</body>
+</html>
