@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pacesetters | Learn</title>
+   <link rel="shortcut icon" href="Logo.jpg">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style >
+     body,html{
+       margin:0;
+       padding:0;
+       box-sizing: border-box;
+       font-family: 'Montserrat',sans-serif;
+       color:#FFF1F2;
+     }
+     *{
+       background: #fc9539;
+     }
+           .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: #FFF1F2;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 0;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  background:#FFF1F2;
+  color: #fc9539;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidebar .closeBtn i{
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 1.5em;
+  margin-left: 50px;
+  background-color: #FFF1F2;
+}
+.sidebar h2{
+  font-weight: bold;
+  background: #77A0F2;
+  color:#FFF1F2 ;
+  line-height: 40px;
+  font-size: 1.6em;
+  padding-left:10px;
+}
+  .heading{
+        display: flex;
+      }
+      .home-bar{
+        font-size: 1.65em;
+        padding-top: 90px;
+        padding-left: 12px;
+        cursor: pointer;
+      }
+      .title-img{
+        width:12rem;
+        margin: 0 auto;
+        margin-bottom:20px;
+      }
+      .learn-content{
+        overflow: hidden;
+      }
+      .learn-content h2{
+        text-align:center;
+        font-style: italic;
+   transform:scale(0.1);
+   transition: all 750ms;
+      }
+      .learn-info{
+        text-align: center;
+      padding:20px;
+        padding-top: 50px;
+      }
+      .learn-button-container{
+        display: flex;
+        justify-content: center;
+      }
+      .learn-button{
+        text-decoration:none;
+        padding:18px;
+        background-image: linear-gradient(235deg,#FFF1F2,#fc9539);
+        color:darkblue;
+border-radius:30% 70% 0% 100% / 100% 57% 43% 0% ;
+border-bottom-right-radius:10px;
+      }
+   .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+    height: 100%;
+}
+
+.card {
+    min-width: 300px;
+    height: 200px;
+    background-color: #FFF1F2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+    margin: auto 0;
+    margin-left: 30px;
+    opacity: 0;
+    transform: scale(0.8); /* Cards start smaller */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Scaling and fading transition */
+    color:orange;
+}
+
+.carousel .card.active {
+    opacity: 1;
+    transform: scale(1); /* Enlarged when active */
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.carousel-btn.left {
+    left: 10px;
+top:580px;
+}
+
+.carousel-btn.right {
+    right: 0px;
+    top:580px;
+}
+
+.carousel-btn i {
+    cursor: pointer;
+    color:darkblue;
+}
+
+button:focus {
+    outline: none;
+}
+.learn-card-info{
+  text-align:center;
+  padding-top:80px;
+  line-height: 20px;
+  padding-bottom: 50px;
+  font-weight: bold;
+}
+.learn-head{
+  scale:0.1;
+}
+/* General Styles for Mobile Devices */
+@media (min-width: 640px) {
+    .carousel-container {
+        width: 100%; /* Make the carousel take full width of the mobile screen */
+        height: 200px; /* Adjust the height for smaller screens */
+    }
+
+    .card {
+        min-width: 85%; /* Ensure cards are full width on small screens */
+        font-size: 18px; /* Decrease font size for mobile */
+    }
+
+    .carousel-btn {
+        padding: 10px; /* Smaller padding for mobile buttons */
+        font-size: 24px; /* Adjust button icon size */
+    }
+
+    .carousel-btn.left {
+        left: 5px; /* Adjust button positioning for mobile */
+        top:580px;
+    }
+
+    .carousel-btn.right {
+        right: 5px;
+        top:580px;
+    }
+}
+
+/* Styles for Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .carousel-container {
+        width: 80%; /* Adjust width to fit tablet screens */
+        height: 220px; /* Adjust height for better visibility */
+    }
+
+    .card {
+        min-width: 80%; /* Cards will take up more width */
+        font-size: 20px; /* Adjust font size for tablet */
+        margin: auto 0;
+        justify-content: center;
+        align-items:center;
+        margin-left: 25%;
+    }
+
+    .carousel-btn {
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .carousel-btn.left {
+        left: 10px;
+        font-size: 5em;
+    }
+
+    .carousel-btn.right {
+        right: 10px;
+        font-size: 3em;
+    }
+}
+
+/* Styles for Desktop */
+@media (min-width: 1025px) {
+    .carousel-container {
+        width: 100%; /* Limit carousel width for desktop */
+        height: 250px;
+    }
+
+    .card {
+        min-width: 60%;
+        font-size: 40px; /* Larger font for desktop */
+        margin: auto 0;
+        justify-content: center;
+        align-items: center;
+        margin-left: 20%;
+    }
+
+    .carousel-btn {
+        padding: 15px;
+        font-size: 80px;
+    }
+
+    .carousel-btn.left {
+        left: 15px;
+    }
+
+    .carousel-btn.right {
+        right: 15px;
+    }
+    learnhead{
+      font-size:100px;
+    }
+    .learn-content{
+      line-height:50px;
+      font-size:2em;
+    }
+    .home-bar{
+      font-size:4em;
+      padding-left:50px;
+    }
+    .sidebar h2{
+      padding:30px;
+    }
+    .title-img{
+      scale:1.7;
+    }
+}
+   </style >
+</head>
+
+<body>
+<div id="sideBar" class="sidebar">
+  <h2>Pacesetters Academy</h2>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+    <div class="heading">
+<a onclick="openNav()" class="home-bar"><i class="fa fa-solid fa-bars "></i></a>
+  <img src="Logotitle.png" class="title-img">
+</div>
+<div class="learn-content">
+  <h2 class="learnhead">Welcome to the Pacesetters Learning Platform</h2>
+  <p class="learn-card-info">We teach these subjects in preparation for your upcoming examinations</p>
+  <button id="prevBtn" class="carousel-btn left"><i class="fas fa-chevron-left"></i></button>
+  <div class="carousel-container">
+    <div class="carousel">
+    <div class="card">
+       Mathematics
+    </div>
+    <div class="card">
+      English 
+    </div>
+    <div class="card">
+      Biology 
+    </div>
+    <div class="card">
+   Physics
+    </div>
+    <div class="card">
+      Chemistry
+    </div>
+    <div class="card">
+      Further maths
+    </div>
+    <div class="card">
+      Christian Religious Studies 
+    </div>
+    <div class="card">
+      French
+    </div>
+    <div class="card">
+      Ecommerce
+    </div>
+  <div class="card">
+      Economics
+  </div>
+  <div class="card">
+    Geography
+  </div>
+  </div>
+   <button id="nextBtn" class="carousel-btn right"><i class="fas fa-chevron-right"></i></button>
+</div>
+  <p class="learn-info">
+    Click the button below to get registered as a student in our class on Whatsapp now!
+  </p>
+  <div class="learn-button-container">
+  <a href="https://wa.link/33xkt7"class="learn-button">Register</a>
+  </div>
+</div>
+<script>
+  function openNav() {
+    document.getElementById("sideBar").style.width = "250px";
+    document.getElementById("sideBar").style.opacity = "1";
+    if (window.innerWidth >= 640) {
+      document.getElementById("sideBar").style.width = "450px";
+    }
+  }
+  
+  /* Close the sidebar */
+  function closeNav() {
+    document.getElementById("sideBar").style.width = "0";
+    document.getElementById("sideBar").style.opacity = "0";
+  }
+</script>
+<script>
+ const carousel = document.querySelector('.carousel');
+ const cards = document.querySelectorAll('.card'); // Get all cards
+ const prevBtn = document.getElementById('prevBtn');
+ const nextBtn = document.getElementById('nextBtn');
+ 
+ let currentIndex = 0;
+ 
+ // Function to update the active card
+ function updateActiveCard() {
+   cards.forEach((card, index) => {
+     card.classList.remove('active'); // Remove active class from all cards
+     if (index === currentIndex) {
+       card.classList.add('active'); // Add active class to the current card
+     }
+   });
+ }
+ 
+ // Initialize the first card as active
+ updateActiveCard();
+ 
+ prevBtn.addEventListener('click', () => {
+   if (currentIndex > 0) {
+     currentIndex--;
+   } else {
+     currentIndex = cards.length - 1; // Wrap around to the last card
+   }
+   updateCarousel();
+   updateActiveCard();
+ });
+ 
+ nextBtn.addEventListener('click', () => {
+   if (currentIndex < cards.length - 1) {
+     currentIndex++;
+   } else {
+     currentIndex = 0; // Wrap around to the first card
+   }
+   updateCarousel();
+   updateActiveCard();
+ });
+ 
+ function updateCarousel() {
+   var translateXValue; // Assuming each card is 300px wide
+
+ if(window.innerWidth >= 720){
+       translateXValue = -currentIndex * 1150;
+      carousel.style.transform = `translateX(${translateXValue}px)`;
+  }
+  else{
+    translateXValue = -currentIndex * 338;
+    carousel.style.transform = `translateX(${translateXValue}px)`;
+  }
+ }
+</script>
+<script>
+  window.addEventListener('load', function() {
+    var learntext =  document.querySelector('.learnhead');
+    if(window.innerWidth >= 720){
+    learntext.style.transform = 'scale(10)';
+    }
+    else{
+      learntext.style.transform = 'scale(1)';
+    }
+  });
+</script>
+</body>
+
+</html>
