@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pacesetters Academy | Home</title>
+    <link rel="shortcut icon" href="Logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: #FFF1F2;
+    }
+      body,html{
+        font-family: 'Montserrat',sans-serif;
+      }
+      .heading{
+        display: flex;
+      }
+      .home-bar{
+        font-size: 1.65em;
+        padding-top: 90px;
+        padding-left: 12px;
+        cursor: pointer;
+      }
+      .home-info h5{
+        font-weight:normal;
+        text-align: center;
+        line-height: 32px;
+        padding-bottom: 50px;
+      }
+      .home-img{
+        width:22.5rem;
+        opacity: 0;
+      transform: translateX(-100px); /* Initial position off the screen */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      .home-img.show{
+opacity: 1;
+      transform: translateX(0);
+      }
+      .home-trigger{
+        padding-top:50px;
+      }
+      .title-img{
+        width:18rem;
+        margin: 0 auto;
+        margin-bottom:20px;
+        margin-right:50px;
+      }
+      .sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fc9539;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  opacity: 0;
+}
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  background:#fc9539;
+  color: #FFF1F2;
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: #f1f1f1;
+  cursor: pointer;
+}
+
+.sidebar .closeBtn i{
+  position: absolute;
+  top: 50px;
+  right: 25px;
+  font-size: 1.5em;
+  margin-left: 50px;
+  background-color:#fc9539 ;
+}
+.home-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 60px;
+  padding-top: 70px;
+}
+.home-buttons a{
+  padding: 20px;
+  background-image:linear-gradient(300deg,#fc9539,#89A7F9);
+  border-radius:30% 70% 0% 100% / 100% 57% 43% 0% ;
+  box-shadow: 2px 2px 4px 4px grey,
+ 1px 1px 5px 5px lightgrey,
+ inset -1px -1px 6px 6px #FFF1F2
+  ;
+  text-decoration: none;
+  color:black;
+  transition: all 45ms ;
+}
+.home-buttons a:hover{
+  opacity: 0.6;
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow:2px 2px 3px 3px black,
+  -2px -2px 4px -4px grey,
+  inset -2px 2px 5px 5px #FFF1F2
+  ;
+}
+.sidebar h2{
+  font-weight: bold;
+  background: #77A0F2;
+  color:#FFF1F2 ;
+  line-height: 40px;
+  font-size: 1.6em;
+  padding-left:10px;
+}
+.pic-center{
+  display:flex;
+  justify-content:center;
+}
+@media (min-width:640px){
+  .home-img{
+    width:40rem;
+}
+.title-img{
+  margin:0 auto;
+  width:37rem;
+}
+.sidebar a{
+  font-size:3em;
+}
+.fa-solid{
+  font-size:3em;
+}
+.sidebar h2{
+  font-size:3.4em;
+  line-height:60px;
+}
+.home-info h5{
+  font-size:3em;
+  line-height:80px;
+}
+.home-buttons a{
+  padding:30px;
+  font-size:3.2em;
+  text-decoration:none;
+}
+}
+    </style>
+</head>
+<body>
+<div id="sideBar" class="sidebar">
+  <h2>Pacesetters Academy</h2>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
+    <a href="Home.html">Home</a>
+    <a href="About.html">About</a>
+    <a href="learn.html">Learn</a>
+    <a href="contactus.html">Contact Us</a>
+  </div>
+
+  <div class="heading">
+<a onclick="openNav()" class="home-bar"><i class="fa fa-solid fa-bars "></i></a>
+  <img src="Logotitle.png" class="title-img">
+</div>
+<div class="home-info">
+  <h5>Are you looking to enhance your skills, gain new knowledge, or boost your career? I offer personalized teaching services designed to meet your specific learning needs. Whether you're an individual seeking personal development or a business aiming to train your team, my courses cover a wide range of topics with a focus on real-world application and growth.</h5>
+  <div class="pic-center">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMN5c9wNKbqNYv5jNgqPpoRWs1La6B-8XEnCC1nIsAQgYaOlpDmxT7sqU&s=10" alt="Someone laughing" class="home-img">
+  </div>
+  <h5 class="home-trigger">Collaborate with us to improve your learning experience</h5>
+</div>
+<div class="home-buttons">
+  <a href="sign">Sign in</a>
+  <a href="signup.html">Register</a>
+</div>
+
+
+<script>
+ 
+function openNav() {
+  document.getElementById("sideBar").style.width = "250px";
+  document.getElementById("sideBar").style.opacity = "1";
+  if(window.innerWidth >= 640){
+    document.getElementById("sideBar").style.width = "450px";
+  }
+}
+
+/* Close the sidebar */
+function closeNav() {
+  document.getElementById("sideBar").style.width = "0";
+  document.getElementById("sideBar").style.opacity = "0";
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const element = document.querySelector('.home-img'); // Select the single element
+
+  const options = {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the "show" class when the element is in view
+        element.classList.add('show');
+
+        // Trigger Anime.js animation
+        anime({
+          targets: element,
+          translateX: [100, 0], // Slide in from right to left
+          opacity: [0, 1], // Fade in
+          easing: 'easeOutQuad',
+          duration: 800
+        });
+
+        // Stop observing once animation has been triggered
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+  // Start observing the single element
+  observer.observe(element);
+});
+</script>
+</body>
+</html>
